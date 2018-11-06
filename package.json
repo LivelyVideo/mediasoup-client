@@ -1,10 +1,21 @@
 {
-  "name": "mediasoup-client",
-  "version": "2.3.2",
+  "name": "@livelyvideo/mediasoup-client",
+  "publishConfig": {
+    "always-auth": true,
+    "registry": "https://npm.livelyvideo.tv"
+  },
+  "repository": {
+    "private": true
+  },
+  "version": "2.4.0",
   "description": "mediasoup client side JavaScript SDK",
   "author": "Iñaki Baz Castillo <ibc@aliax.net> (https://inakibaz.me)",
   "contributors": [
     "José Luis Millán <jmillan@aliax.net> (https://github.com/jmillan)"
+  ],
+  "files": [
+    "lib-es5",
+    "dist"
   ],
   "homepage": "https://mediasoup.org",
   "license": "ISC",
@@ -20,8 +31,8 @@
   "dependencies": {
     "babel-plugin-transform-builtin-classes": "^0.6.1",
     "bowser": "^1.9.3",
-    "debug": "^4.1.0",
     "events": "^3.0.0",
+    "npm": "^6.4.1",
     "random-number": "^0.0.9",
     "sdp-transform": "^2.5.0"
   },

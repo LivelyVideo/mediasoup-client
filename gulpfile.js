@@ -55,9 +55,9 @@ gulp.task('bundle', () =>
 		})
 		.bundle()
 		.on('error', logError)
-		.pipe(source(`${PKG.name}.js`))
+		.pipe(source('mediasoup-client.js'))
 		.pipe(buffer())
-		.pipe(rename(`${PKG.name}.js`))
+		.pipe(rename('mediasoup-client.js'))
 		.pipe(uglify())
 		.pipe(header(BANNER, { pkg: PKG }))
 		.pipe(gulp.dest('dist/'));
