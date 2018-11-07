@@ -5,9 +5,10 @@
     "registry": "https://npm.livelyvideo.tv"
   },
   "repository": {
-    "private": true
+    "type": "git",
+    "url": "https://github.com/versatica/mediasoup-client.git"
   },
-  "version": "2.4.0",
+  "version": "2.4.0-lv2",
   "description": "mediasoup client side JavaScript SDK",
   "author": "Iñaki Baz Castillo <ibc@aliax.net> (https://inakibaz.me)",
   "contributors": [
@@ -19,10 +20,6 @@
   ],
   "homepage": "https://mediasoup.org",
   "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/versatica/mediasoup-client.git"
-  },
   "scripts": {
     "lint": "eslint -c .eslintrc.js gulpfile.js lib",
     "build": "gulp dist:production"
