@@ -1086,8 +1086,10 @@ function matchCodecs(
 			if (aPacketizationMode !== bPacketizationMode)
 				return false;
 
-			// If strict matching check profile-level-id.
-			if (strict)
+			// If strict matching or level asymmetry is not allowed, check profile-level-id.
+			const aLevelAsymmetryAllowed = aCodec.parameters['level-asymmetry-allowed'];
+			const bLevelAsymmetryAllowed = bCodec.parameters['level-asymmetry-allowed'];
+			if (strict || !aLevelAsymmetryAllowed || !bLevelAsymmetryAllowed)
 			{
 				if (!h264.isSameProfile(aCodec.parameters, bCodec.parameters))
 					return false;
