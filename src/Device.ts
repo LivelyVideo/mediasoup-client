@@ -72,18 +72,11 @@ export function detectDevice(): BuiltinHandlerName | undefined
 			return undefined;
 		}
 
-		if (typeof RTCRtpTransceiver !== 'undefined')
-		{
-			logger.debug('this._detectDevice() | ReactNative UnifiedPlan handler chosen');
+		// lively video-client temp fix: because of how we are using react-native-webrtc,
+		// we must use ReactNativeUnifiedPlan. antonio@livelyvideo.tv
+		logger.debug('this._detectDevice() | ReactNative UnifiedPlan handler chosen');
 
-			return 'ReactNativeUnifiedPlan';
-		}
-		else
-		{
-			logger.debug('this._detectDevice() | ReactNative PlanB handler chosen');
-
-			return 'ReactNative';
-		}
+		return 'ReactNativeUnifiedPlan';
 	}
 	// Browser.
 	else if (typeof navigator === 'object' && typeof navigator.userAgent === 'string')
